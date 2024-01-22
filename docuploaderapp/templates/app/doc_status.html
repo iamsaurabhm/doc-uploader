@@ -1,0 +1,55 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %} Document Details {% endblock %}
+
+{% block content %}
+
+<body id="doc_status">
+  <section class="doc_status p-0">
+    <a class="breadcrumb mb-4" href="{% url 'document' %}"> &lt;&lt; Back</a>
+    <table class="table table-hover"
+      style="border: 1px solid black; font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif; letter-spacing:-1px; background-color:#2E8BC0; margin-top:-10px;">
+      <thead>
+        <tr style="background-color:#2E8BC0;">
+          <th scope="col">ID</th>
+          <th scope="col">Company Name</th>
+          <th scope="col">Client Name</th>
+          <th scope="col">Adviser Name</th>
+          <th scope="col">Submission Date</th>
+          <th scope="col">Due Date</th>
+          <th scope="col">Paraplanner</th>
+          <th scope="col">Status</th>
+          <th scope="col" span="2">Query</th>
+          <th scope="col">Document</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <tr style="background-color:lightblue;">
+          <td scope="row">{{doc.id}}</td>
+          <td>{{doc.company_name}}</td>
+          <td>{{doc.client_name}}</td>
+          <td>{{doc.adviser_name}}</td>
+          <td>{{doc.submitted_at}}</td>
+          <td>{{doc.due_date}}</td>
+          <td>{{doc.paraplanner}}</td>
+          <td>{{doc.status}}</td>
+          <td style="width:250px; text-align:justify; text-justify: inter-word;">{{doc.query}}</td>
+          <td><a href="{{doc.document.url}}">Download Document</a></td>
+          <td>
+            <a href="{% url 'update' doc.id %}" class="btn btn-warning btn-sm pt-0 pb-0 p-4 ">Edit</a>
+            {% if request.user.is_staff and request.user.is_superuser %}
+            <form action="{% url 'delete' doc.id %}" method="post">
+              {% csrf_token %}
+              <input type="submit" class="btn btn-sm btn-danger pt-0 pb-0 p-2" value="delete">
+            </form>
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+
+{% endblock content %}

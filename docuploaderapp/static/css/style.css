@@ -1,0 +1,432 @@
+/* For mobile phones: */
+
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+
+
+/*====================== base Css (base.html) ============== */
+
+.base .navbar-header img {
+    width:60%;
+}
+
+.base .collapse {
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+}
+
+.base .navbar-header a {
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    text-transform:uppercase;
+}
+
+.base .collapse .navbar-left li {
+    margin-left: -100px;
+    padding: 0px;
+}
+
+.base .collapse .navbar-right li{
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    text-transform:uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    /* font-weight: lighter; */
+    color: rgb(255, 241, 227);
+}
+
+.base .collapse .navbar-right .v-line {
+    color: white;
+    margin-top: 16px;
+    margin-left: 5px;
+}
+
+.base .collapse .navbar-right li a{
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    text-transform:uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: rgb(255, 255, 255);
+}
+
+.base .collapse .navbar-right .logout {
+    margin-top: 1px;
+    color: #3a399e;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 6px;
+    margin-right: 10px;
+}
+
+.base .collapse .navbar-right .sign-up {
+    margin-top: 1px;
+    color: white;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*====================== Login Page Css (login.html) ============== */
+
+.login-section  {
+    /* background-color: tomato; */
+    height: 540px;
+    margin-top: -10px;
+    overflow-x: hidden;
+}
+
+.login-section .container {
+    width: 570px;
+}
+
+.login-section .container .row .login {
+    padding: 10px;
+    /* letter-spacing: 1px; */
+}
+
+.login-section .container .row .login .login_form {
+    color: white;
+    background-color: rgb(179, 143, 101);
+    margin-top: 70px;
+    padding: 10px;
+    padding-bottom: 15px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    /* box-shadow: 10px rgb(10, 10, 10); */
+    box-shadow: 2px 20px 20px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.login-section .container .row .login .login_form .form-group {
+    padding-bottom: 0px;
+}
+
+.login-section .container .row .login img {
+    display: block;
+    width: 100px; 
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-section .container .row .login .login_form button {
+    color: rgb(51, 48, 48);
+    height: 30px;
+    margin-bottom: 15px;
+    border: 1px solid;
+    padding-top: 4px;
+    background-color: azure;
+}
+
+.login-section .container .row .login .login_form a {
+    color: rgb(51, 48, 48);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-section .container .row .login .login_form a:hover {
+    color: yellow;
+  }
+
+.login-section .container .row .login .login_form .btn-sm {
+    background-color: tomato;
+    text-align: center;
+    margin-left: 5px;
+    height: 25px;
+    /* padding-bottom: 10px; */
+}
+
+
+/*====================== Register Page Css (register.html) ============== */
+
+.register-section  {
+    /* background-color: tomato; */
+    height: 700px;
+    margin-top: -10px;
+    /* overflow-x: hidden; */
+}
+
+.register-section .container {
+    width: 800px;
+    margin-bottom: 10px;
+}
+
+.register-section .container .row .register .register_form {
+    color: rgb(34, 34, 34);
+    background-color: rgb(179, 143, 101);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 15px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    box-shadow: 2px 20px 20px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.register-section .container .row .register img {
+    display: block;
+    width: 100px; 
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.register-section .container .row .register .register_form a {
+    color: rgb(51, 48, 48);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register-section .container .row .register .register_form a:hover {
+    color: yellow;
+}
+
+.register-section .container .row .register .register_form .btn {
+    margin-bottom: 20px;
+    border: 1px solid;
+    padding-top: 5px;
+    background-color: azure;
+    color: rgb(51, 48, 48);
+}
+
+.register-section .container .row .register .register_form .btn-sm {
+    background-color: tomato;
+    text-align: center;
+    margin-left: 5px;
+    height: 25px;
+    /* padding-bottom: 10px; */
+}
+
+
+/* ================Home Page Css (home.html)================== */
+
+#width {
+    width:440px;
+    max-height: 230px;
+  }
+  
+.query {
+    margin-top: -80px;
+}
+
+.text {
+    font-size:14px;
+    text-decoration:none;
+  }
+
+.datepicker {
+    width:440px
+}
+
+.home-section .msg {
+    text-align: center;
+    background-color: #17a2b8;
+    color: azure;
+    width: 400px;
+    margin-left: 450px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    margin-top: 30px;
+}
+
+body#home {
+    background-color: rgb(183, 238, 255);
+}
+
+.home-section {
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+.home-section .container-fluid .row form{
+    /* margin-left:25px; */
+    padding-top: 10px;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-bottom: 10px;
+}
+
+.home-section .container-fluid .row a{
+    margin-left:79.5rem;
+    width: 350px;
+    text-decoration: none;
+    font-size: medium;
+    background-color: rgb(166, 55, 230);
+    color: azure;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 35px;
+    margin-bottom: -15px;
+}
+
+.home-section .container-fluid .row .form-area{
+    color: azure;
+    padding-top: 2%;
+    padding-bottom: .8%;
+    background-color: rgb(59, 86, 99);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 2px 20px 20px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(90deg, rgb(172, 26, 106) 0%, rgb(162, 37, 219) 48%, rgba(0,212,255,1) 100% ); 
+    /* border: 1px solid; */
+}
+
+.home-section .container-fluid .row .form-area h3{
+    color: rgb(181, 236, 255);
+    text-align: center;
+    padding: 5px;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #b17b7b;
+    /* background-color: rgb(78, 111, 128); */
+    border: 1px solid;
+}
+
+.home-section .container-fluid .row form .btn{
+    margin-top: 152px;
+    width: 200px;
+    margin-left: 150px;
+    background-color: rgb(221, 75, 156);
+}
+
+
+/* udpdate page css (update.html) */
+
+body#update {
+    background-color: rgb(183, 238, 255);
+}
+
+.update-section {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: snow;
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+}
+
+.update-section .form-area {
+    background-color: rgb(56, 88, 92);
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    /* margin-bottom: 15px; */
+    box-shadow: 2px 20px 20px 2px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    background-image: linear-gradient(90deg, rgb(101, 9, 248) 0%, rgb(162, 37, 219) 48%, rgba(0,212,255,1) 100% );
+}
+
+.update-section form {
+    margin-left: 26px;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.update-section form .btn{
+    margin-top: 130px;
+    margin-left: 24px;
+    justify-content: center;
+    width: 200px;
+}
+ 
+
+/*####################### document page css (doc.html) */
+body#doc {
+    background-color:#2E8BC0;
+}
+
+.doc .row {
+    margin-bottom: 1rem; 
+    margin-top: 3rem;
+    padding: 10px;
+}
+
+.doc .row .col-lg-3 a .btn{
+    padding:1px;
+    margin-top: 1.3px;
+    width: 50%;
+    background-color: rgb(235, 235, 235);
+}
+
+.doc .row .col-lg-3 a {
+    color: black;
+    text-decoration: none;
+}
+
+.doc .row .list-table {
+    background-color: rgb(64, 217, 255);
+    color: white;
+    /* margin-left:; */
+    margin-top: -30px;
+    width: 100%;
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    border-radius: 3px;
+}
+
+.doc .row .list-table:hover {
+    background-color: rgb(11, 108, 133);
+    box-shadow: 1px 1px 1px 1px #ffffff;
+}
+
+.doc .row .list-table .table {
+    margin-top:-100px; 
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+    letter-spacing:-1px;
+    background-color:#2E8BC0; 
+    margin-top:-10px;
+}
+
+.doc .row .table tbody tr td a{
+    color: #2E8BC0;
+}
+
+
+/*################### doc_status.html page css */
+
+body#doc_status {
+    background-color:#2E8BC0;   
+}
+
+.breadcrumb {
+    background-color: transparent;
+    /* text-decoration: none; */
+    color: azure;
+    margin-top: 15px;
+    padding: 0px;
+    margin-left: 10px;
+    width: 335px;
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+}
+
+.breadcrumb:hover {
+    /* background-color: rgb(238, 156, 34); */
+    text-decoration: none;
+    color: rgb(185, 82, 82);
+    font-family: Roboto,Lucida Grande,DejaVu Sans,Bitstream Vera Sans,Verdana,Arial,sans-serif;
+}
+
+.doc_status .table th {
+    border: 1px solid black; 
+    text-align:center;
+}
+
+.doc_status .table td {
+    border: 1px solid black; 
+    color:black;
+    text-align: center;
+}

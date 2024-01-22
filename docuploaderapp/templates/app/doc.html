@@ -1,0 +1,88 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %} Uploaded Document {% endblock %}
+
+{% block content %}
+
+{% comment %} {% if doc.status == "In Progress" %} {% endcomment %}
+
+<body id="doc">
+  <div class="container-fluid doc">
+
+    <!-- Search form -->
+    <div class="row">
+      <div class="">
+        <div class="col-lg-8 offset-1">
+          <form method='GET' action="">
+            <input style="width:570px; margin-left:45px;" type="text" name="search" placeholder="Search Project" />
+            <input style="width:160px;" type="submit" value="Search" />
+          </form>
+        </div>
+        <div class="col-lg-3">
+          <a href="{% url 'document' %}"><button class="btn btn-md">Show List</button></a>
+        </div>
+        <!-- /.col-lg-6 -->
+      </div>
+    </div><!-- /.row -->
+    <!-- /search form -->
+
+    <div class="row">
+      <div class="list-table col-sm-8">
+        <h4 class="text-center mt-4">List of Ongoing Project</h4>
+        <br>
+        <table class="table table-hover">
+
+          <thead>
+            <tr style="background-color:#2E8BC0; ">
+              <th scope="col"></th>
+              <th scope="col">Client Name</th>
+              <th scope="col">Company Name</th>
+              <th scope="col">Assinged to</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+
+          {% for doc in users %}
+          {% comment %} {% if doc.status == "In Progress" %} {% endcomment %}
+          <tbody>
+            <tr style="background-color:lightblue;">
+              <th scope="row"> &gt; </th>
+              <td><a class="p-2" href="{% url 'status' doc.id %}">{{doc.client_name}}</a></td>
+              <td>{{doc.company_name}}</td>
+              <td>{{doc.paraplanner}}</td>
+              <td>{{doc.status}}</td>
+            </tr>
+          </tbody>
+          {% comment %} {% endif %} {% endcomment %}
+          {% endfor %}
+        </table>
+
+        <!-- Pagination -->
+        {% if users.has_other_pages %}
+        <ul class="pagination">
+          {% if users.has_previous %}
+          <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
+          {% else %}
+          <li class="disabled"><span>&laquo;</span></li>
+          {% endif %}
+          {% for i in users.paginator.page_range %}
+          {% if users.number == i %}
+          <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+          {% else %}
+          <li><a href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+          {% endfor %}
+          {% if users.has_next %}
+          <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
+          {% else %}
+          <li class="disabled"><span>&raquo;</span></li>
+          {% endif %}
+        </ul>
+        {% endif %}
+        <!-- Pagination -->
+
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock content %}

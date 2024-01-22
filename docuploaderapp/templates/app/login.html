@@ -1,0 +1,30 @@
+{% extends "app/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block title %}Zedpath - Login{% endblock title %}
+{% block content %}
+
+<div class="login-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 login">
+        <form method="POST" class="login_form">
+          <img src="{% static 'images/login.png' %}" alt="">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            {{ form.as_p }}
+          </fieldset>
+          <center>
+            <button class="btn btn-outline-info" type="submit"><span class="glyphicon glyphicon-log-in"></span> &nbsp;
+              login</button>
+          </center>
+          <br />
+          Don't have an account?<a class="btn-sm" href="{% url 'register' %}">Sign Up</a>
+        </form>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
